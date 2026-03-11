@@ -1,0 +1,172 @@
+1️⃣ Input (Data the user enters)
+
+When adding a book, the user must give information about the book.
+
+Example input:
+
+Enter Book ID: 101
+Enter Book Name: CleanCode
+Enter Author Name: RobertMartin
+Enter Quantity: 3
+
+So the inputs are:
+
+Book ID
+
+Book Name
+
+Author Name
+
+Quantity
+
+These will be stored inside a Book object.
+
+Example class:
+
+class Book
+{
+public:
+    int id;
+    string name;
+    string author;
+    int quantity;
+};
+2️⃣ Output (What the program shows)
+
+Output is the information printed on screen.
+
+Example:
+
+----- Book List -----
+
+ID: 101
+Name: CleanCode
+Author: RobertMartin
+Available: 3
+
+So the program reads the stored books and prints them.
+
+3️⃣ Example Operations (Input → Output)
+Add Book
+
+Input:
+
+ID: 102
+Name: CppPrimer
+Author: Lippman
+Quantity: 5
+
+Output:
+
+Book added successfully
+Show Books
+
+Input:
+
+User chooses option 2
+
+Output:
+
+ID: 101  CleanCode   RobertMartin   3
+ID: 102  CppPrimer   Lippman        5
+Borrow Book
+
+Input:
+
+Enter Book ID to borrow: 101
+
+Output:
+
+Book borrowed successfully
+Remaining copies: 2
+
+Program logic:
+
+quantity--
+Return Book
+
+Input:
+
+Enter Book ID to return: 101
+
+Output:
+
+Book returned successfully
+Available copies: 3
+
+Program logic:
+
+quantity++
+4️⃣ Program Menu Example
+
+Your program will look like this:
+
+1 Add Book
+2 Show Books
+3 Borrow Book
+4 Return Book
+5 Search Book
+6 Exit
+Enter choice:
+
+User enters:
+
+1
+
+Then program asks for book details.
+
+5️⃣ Data Structure You Will Use
+
+Just like your expense tracker:
+
+vector<Book> library;
+
+Every time you add a book:
+
+library.push_back(book);
+6️⃣ Example Complete Flow
+1 Add Book
+2 Show Books
+3 Borrow Book
+4 Return Book
+5 Exit
+
+User:
+
+1
+
+Input:
+
+Book ID: 201
+Name: Algorithms
+Author: CLRS
+Quantity: 4
+
+Output:
+
+Book added successfully
+
+User:
+
+2
+
+Output:
+
+201 Algorithms CLRS 4
+7️⃣ Why This Project Is Powerful
+
+This project teaches:
+
+classes
+
+vectors
+
+search algorithms
+
+state change (borrow/return)
+
+menu design
+
+data modeling
+
+This is very similar to real software logic.
