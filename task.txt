@@ -1,41 +1,53 @@
-1️⃣ Input (Data the user enters)
+LIBRARY MANAGEMENT SYSTEM – PROJECT TASK DESCRIPTION
 
-When adding a book, the user must give information about the book.
+Project Name
+Library Management System (C++ CLI Application)
 
-Example input:
+Objective
+The objective of this project is to build a simple command-line based library management system using C++.
+The program allows users to manage books in a library by performing operations such as adding, viewing, borrowing, returning, searching, deleting, and updating books.
+The system also stores book records in a file so that data is preserved even after the program exits.
+
+---
+
+1. INPUT (User Data)
+
+When adding a book, the user must enter information about the book.
+
+Example Input
 
 Enter Book ID: 101
 Enter Book Name: CleanCode
 Enter Author Name: RobertMartin
 Enter Quantity: 3
 
-So the inputs are:
+Required Inputs
 
-Book ID
+• Book ID
+• Book Name
+• Author Name
+• Quantity (Number of available copies)
 
-Book Name
+These values are stored inside a Book object.
 
-Author Name
-
-Quantity
-
-These will be stored inside a Book object.
-
-Example class:
+Example Book Class
 
 class Book
 {
 public:
-    int id;
-    string name;
-    string author;
-    int quantity;
+int id;
+string name;
+string author;
+int quantity;
 };
-2️⃣ Output (What the program shows)
 
-Output is the information printed on screen.
+---
 
-Example:
+2. OUTPUT (Program Display)
+
+Output is the information printed to the terminal.
+
+Example Output
 
 ----- Book List -----
 
@@ -44,129 +56,191 @@ Name: CleanCode
 Author: RobertMartin
 Available: 3
 
-So the program reads the stored books and prints them.
+The program reads stored book records and displays them to the user.
 
-3️⃣ Example Operations (Input → Output)
+---
+
+3. MAIN OPERATIONS
+
 Add Book
 
-Input:
+Input
 
 ID: 102
 Name: CppPrimer
 Author: Lippman
 Quantity: 5
 
-Output:
+Output
 
 Book added successfully
+
+---
+
 Show Books
 
-Input:
+Input
 
-User chooses option 2
+User selects menu option 2
 
-Output:
+Output
 
-ID: 101  CleanCode   RobertMartin   3
-ID: 102  CppPrimer   Lippman        5
+ID: 101   CleanCode   RobertMartin   3
+ID: 102   CppPrimer   Lippman        5
+
+---
+
 Borrow Book
 
-Input:
+Input
 
 Enter Book ID to borrow: 101
 
-Output:
+Output
 
 Book borrowed successfully
 Remaining copies: 2
 
-Program logic:
+Program Logic
 
 quantity--
+
+---
+
 Return Book
 
-Input:
+Input
 
 Enter Book ID to return: 101
 
-Output:
+Output
 
 Book returned successfully
 Available copies: 3
 
-Program logic:
+Program Logic
 
 quantity++
-4️⃣ Program Menu Example
 
-Your program will look like this:
+---
+
+Search Book
+
+Input
+
+Enter Book ID to search
+
+Output
+
+Displays book information if found.
+
+---
+
+Delete Book
+
+Input
+
+User provides Book ID or Book Name.
+
+Output
+
+Book removed from the system.
+
+---
+
+Update Book
+
+Input
+
+User selects a book and chooses which field to update.
+
+Possible updates
+
+• Book ID
+• Book Name
+• Author Name
+• Available Quantity
+
+---
+
+4. PROGRAM MENU
+
+The application is menu driven.
+
+Example Menu
 
 1 Add Book
 2 Show Books
 3 Borrow Book
 4 Return Book
 5 Search Book
-6 Exit
-Enter choice:
+6 Delete Book
+7 Update Book
+8 Exit
 
-User enters:
+User selects an option and the program performs the corresponding operation.
 
-1
+---
 
-Then program asks for book details.
+5. DATA STRUCTURE USED
 
-5️⃣ Data Structure You Will Use
-
-Just like your expense tracker:
+The program stores books in a dynamic container.
 
 vector<Book> library;
 
-Every time you add a book:
+Every time a book is added:
 
 library.push_back(book);
-6️⃣ Example Complete Flow
-1 Add Book
-2 Show Books
-3 Borrow Book
-4 Return Book
-5 Exit
 
-User:
+This allows the program to store an unlimited number of books during execution.
 
-1
+---
 
-Input:
+6. FILE STORAGE
 
-Book ID: 201
-Name: Algorithms
-Author: CLRS
-Quantity: 4
+Book records are saved in a file.
 
-Output:
+File Name
 
-Book added successfully
+books_list.txt
 
-User:
+Example File Content
 
-2
+101 CleanCode RobertMartin 3
+102 CppPrimer Lippman 5
 
-Output:
+The program loads data from this file when it starts and saves updates back to the file.
 
-201 Algorithms CLRS 4
-7️⃣ Why This Project Is Powerful
+---
 
-This project teaches:
+7. COMPLETE PROGRAM FLOW
 
-classes
+Start Program
+↓
+Load books from file
+↓
+Display Menu
+↓
+User selects operation
+↓
+Program processes request
+↓
+Data updated in memory and file
+↓
+Repeat until user exits
 
-vectors
+---
 
-search algorithms
+8. CONCEPTS USED IN THIS PROJECT
 
-state change (borrow/return)
+• Object Oriented Programming (OOP)
+• Classes and Objects
+• STL Vector
+• File Handling (ifstream / ofstream)
+• Searching and Updating Data
+• Menu Driven CLI Design
 
-menu design
+---
 
-data modeling
-
-This is very similar to real software logic.
+Author
+Bineesh
