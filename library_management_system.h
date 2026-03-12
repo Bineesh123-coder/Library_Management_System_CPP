@@ -21,6 +21,8 @@ class Library{
     
     vector<Book> books;
 
+    void Load_Books();
+
     void Add_Book();
     
     void Show_Books();
@@ -30,6 +32,10 @@ class Library{
     void Return_Book();
 
     void Search_Book();
+
+    void Delete_Book();
+
+    void Update_Book();
 
 };
 
